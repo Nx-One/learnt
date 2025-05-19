@@ -78,6 +78,12 @@
                                             <p class="mb-0 card-text">
                                                 {{ $assessment->description }}
                                             </p>
+                                            <p class="fw-bold mt-3 mb-0">
+                                                Due Date
+                                                <span class="fw-bold text-danger fs-6 fw-lighter">
+                                                    {{ date('d M Y', strtotime($assessment->due_date)); }}
+                                                </span>
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
