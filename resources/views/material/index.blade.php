@@ -63,35 +63,16 @@
                     <a href="{{ $material->link }}" style="color: inherit; text-decoration: none;height: 100%;" target="_blank">
                         <div class="card">
                             <div class="card-body">
-                                <div class="p-3">
-                                    <div class="row" style="height: 200px;">
-                                        <img src="{{ asset('storage/images/' . $material->image) }}" alt="" class="img-fluid" style="height:200px; object-fit: cover" />
+                                <div class="row">
+                                    <div class="col">
+                                        <img src="{{ asset('storage/images/' . $material->image) }}" alt="" class="img-fluid rounded" />
                                     </div>
-                                    <div class="row justify-content-between">
-                                        {{-- <div class="col-1 d-flex justify-content-center align-items-center">
-                                            <h2 class="fw-bold display-6 mb-0">
-                                                @if($material->type == 'video')
-                                                    <i class='bx bx-video' ></i>
-                                                @elseif($material->type == 'document')
-                                                    <i class='bx bxs-file-doc'></i>
-                                                @elseif($material->type == 'slides')
-                                                    <i class='bx bx-slideshow'></i>
-                                                @elseif($material->type == 'photo')
-                                                    <i class='bx bx-image-alt'></i>
-                                                @endif
-                                            </h2>
-                                        </div> --}}
-                                        <div class="col d-flex flex-column mb-2">
-                                            <div class="d-flex align-items-center mb-1">
-                                                <div class="d-flex">
-                                                    <h2 class="fw-bold mb-0">
-                                                    {{ $material->title }}
-                                                    </h2>
-                                                </div>
-                                            </div>
-                                            <p class="mb-1 fs-5">
-                                                {{ Str::limit($material->description, 100, '...') }}
-                                            </p>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <h5 class="fw-bold">{{ $material->title }}</h5>
+                                            <p class1="card-text">{{ Str::limit($material->description, 100, '...') }}</p>
                                             <span class="card-text text-body-secondary fs-6 fw-lighter">
                                                 {{ ucfirst($material->type) }} •
                                                 {{ $material->created_at->format('d M Y') }}

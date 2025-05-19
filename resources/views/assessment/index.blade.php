@@ -67,20 +67,15 @@
                     <div class="col">
                         <div class="card mb-3">
                             <div class="row g-0">
-                                {{-- <div class="col-md-3 me-3">
-                                    <img src="{{ asset('storage/images/' . $assessment->image) }}" alt="" class="img-fluid rounded-start" style="object-fit: cover; height: 100%" />
-                                </div> --}}
                                 <div class="col-md-10">
                                     <div class="card-body">
                                         <div class="row">
                                             <div class="d-flex align-items-center">
                                                 <div class="d-flex">
-                                                    <h2 class="fw-bold mb-0">
-                                                    {{ $assessment->title }}
-                                                    </h2>
+                                                    <h5 class="fw-bold">{{ $assessment->title }}</h5>
                                                 </div>
                                             </div>
-                                            <p class="mb-0 mt-3">
+                                            <p class="mb-0 card-text">
                                                 {{ $assessment->description }}
                                             </p>
                                         </div>
